@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         e.target.value = valorFormatado;
     });
+    
     document.addEventListener('DOMContentLoaded', function() {
         const pesoInput = document.getElementById('peso');
     

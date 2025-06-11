@@ -9,40 +9,35 @@
     <link rel="icon" href="img/icons8-escala-96.png">
 </head>
 <body class="bg-gradient-to-r from-lime-700 via-lime-800 to-lime-900 h-screen flex items-center justify-center animated-background">
-    <div class="grid grid-cols-3">
-        <div class="col"></div>
-        <div class="col">
-            <div class="container bg-stone-100 p-10 rounded-lg align-middle">
-                <img src="img/icons8-escala-96.png" alt="">
-                <h3 class="text-4xl pt-3">Calculadora de IMC</h3><br>
-                <p class="text-slate-400">O IMC é uma ferramenta útil para uma primeira olhada na sua saúde, mas não conta a história toda! Seu corpo é único, e fatores como massa muscular, estrutura óssea e estilo de vida são super importantes.
-                    <br><br>
-                    Use este resultado como um ponto de partida para entender melhor sua saúde, mas lembre-se que o mais importante é se sentir bem e ter hábitos saudáveis. Para um acompanhamento personalizado, a orientação de um profissional de saúde é sempre a melhor escolha!</p>
-                <br>
-                <div class="grid">
-                    <div class="input-group">
-                        <label for="peso">Peso em kg</label><br>
-                        <input type="decimal" id="peso" max="650" maxlength="3" class="w-full min-w-0 grow py-1.5 pr-3 pl-2 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 bg-slate-200 rounded-lg " placeholder="0.00">
-                    </div>
-                
-                    <div class="input-group pt-3">
-                        <label for="altura">Altura (m)</label><br>
-                        <input type="text" inputmode="decimal" id="altura" maxlength="4" placeholder="Ex: 1,75" class="w-full min-w-0 grow py-1.5 pr-3 pl-2 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 bg-slate-200 rounded-lg " >
-                    </div>
-                </div>
+    
+    <div class="container bg-stone-100 p-10 rounded-lg align-middle w-100">
+        <img src="img/icons8-escala-96.png" alt="">
+        <h3 class="text-4xl pt-3">Calculadora de IMC</h3><br>
+        <p class="text-slate-400">O IMC é uma ferramenta útil para uma primeira olhada na sua saúde, mas não conta a história toda! Seu corpo é único, e fatores como massa muscular, estrutura óssea e estilo de vida são super importantes.
+            <br><br>
+            Use este resultado como um ponto de partida para entender melhor sua saúde, mas lembre-se que o mais importante é se sentir bem e ter hábitos saudáveis. Para um acompanhamento personalizado, a orientação de um profissional de saúde é sempre a melhor escolha!</p>
+        <br>
+        <div class="grid">
+            <div class="input-group">
+                <label for="peso">Peso em kg</label><br>
+                <input type="decimal" id="peso" max="650" maxlength="3" class="w-full min-w-0 grow py-1.5 pr-3 pl-2 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 bg-slate-200 rounded-lg " placeholder="0.00">
+            </div>
         
-                <br>
-                <button id="calcularBtn" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Calcular</button>
-        
-                <div class="bg-slate-100 border border-slate-400 text-slate-700 px-4 py-3 rounded relative hidden" role="alert">
-                    <span class="block sm:inline"><div id="resultado"></div></span>
-                    <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-                      <svg class="fill-current h-6 w-6 text-slate-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
-                    </span>
-                </div>
+            <div class="input-group pt-3">
+                <label for="altura">Altura (m)</label><br>
+                <input type="text" inputmode="decimal" id="altura" maxlength="4" placeholder="Ex: 1,75" class="w-full min-w-0 grow py-1.5 pr-3 pl-2 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6 bg-slate-200 rounded-lg " >
             </div>
         </div>
-        <div class="col"></div>
+
+        <br>
+        <button id="calcularBtn" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Calcular</button>
+
+        <div class="bg-slate-100 border border-slate-400 text-slate-700 px-4 py-3 rounded relative hidden" role="alert">
+            <span class="block sm:inline"><div id="resultado"></div></span>
+            <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                <svg class="fill-current h-6 w-6 text-slate-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+            </span>
+        </div>
     </div>
 
     
